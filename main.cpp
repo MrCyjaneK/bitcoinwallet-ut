@@ -36,8 +36,8 @@ int main(int argc, char *argv[])
 
     // Start the process
     QProcess process;
-    process.start("bitcoind -prune=2200 -daemon -server -datadir="+QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
-    //process.start("bitcoind -daemon -server -datadir=" + QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+    process.start("bitcoind -rpcallowip=10.15.19.105 -prune=2200 -daemon -server -rpcport=10001 -datadir="+QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+
     qDebug() << "Started bitcoind.";
     // qDebug() << QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     // /home/phablet/.local/share/bitcoinwallet.mrcyjanek
