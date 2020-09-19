@@ -17,7 +17,7 @@
         }
     },
     "install_bin": [
-        "${ROOT}/build/${ARCH_TRIPLET}/${NAME}/bitcoind",
-        "${ROOT}/build/${ARCH_TRIPLET}/${NAME}/bitcoin-cli"
+        "${ROOT}/build/${ARCH_TRIPLET}/bitcoind/bitcoind",
+        "${ROOT}/build/${ARCH_TRIPLET}/bitcoind/bitcoin-cli"
     ]
 }

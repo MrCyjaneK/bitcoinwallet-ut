@@ -3,8 +3,7 @@ import Ubuntu.Components 1.3
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
-
-import Example 1.0
+import Process 1.0
 
 MainView {
     id: root
@@ -42,13 +41,15 @@ MainView {
                 Layout.alignment: Qt.AlignHCenter
                 text: 'test'
             }
-
+            Process {
+                id: process
+                onReadyRead: label.text = readAll();
+            }
             Button {
                 Layout.alignment: Qt.AlignHCenter
                 text: i18n.tr('Press here!')
-                onClicked: Example.speak()
+                onClicked: process.start("/bin/cat", [ "/proc/uptime" ])
             }
-
             Item {
                 Layout.fillHeight: true
             }

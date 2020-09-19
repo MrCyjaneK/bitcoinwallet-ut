@@ -2,6 +2,5 @@
     "policy_groups": [
         "networking"
     ],
-    "policy_version": 16.04,
-    "template": "unconfined"
+    "policy_version": 16.04
 }
