@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bitcoinwallet.mrcyjanek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-19 13:06+0000\n"
+"POT-Creation-Date: 2020-09-19 17:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:23 bitcoinwallet.desktop.in.h:1
+#: ../qml/Main.qml:54 bitcoinwallet.desktop.in.h:1
 msgid "Bitcoin Wallet"
 msgstr ""
 
-#: ../qml/Main.qml:47
-msgid "Press here!"
+#: ../qml/Main.qml:62
+msgid "X.XXXXXXXX BTC"
+msgstr ""
+
+#: ../qml/Main.qml:77
+msgid "Bitcoin address"
+msgstr ""
+
+#: ../qml/Main.qml:84
+msgid "Amount in Bitcoin"
+msgstr ""
+
+#: ../qml/Main.qml:103
+msgid "Deposit"
+msgstr ""
+
+#: ../qml/Main.qml:120
+msgid "Withdraw"
 msgstr ""

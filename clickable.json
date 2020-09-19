@@ -13,11 +13,10 @@
                 "libtool"
             ],
             "prebuild": "(mkdir -p ${ROOT}/libs/${NAME}/${ARCH_TRIPLET}; cd ${ROOT}/libs/${NAME}/${ARCH_TRIPLET} && git clone https://github.com/bitcoin/bitcoin/ -b 0.20 --depth=1 .) || true",
-            "build": "set -x; cd ${ROOT}/libs/${NAME}/${ARCH_TRIPLET}; cd depends && make -j4 HOST=${ARCH_TRIPLET} && cd .. && ./autogen.sh && ./configure --prefix=${ROOT}/libs/${NAME}/${ARCH_TRIPLET}/depends/${ARCH_TRIPLET} --with-gui=no --disable-static --disable-tests --disable-bench && make -j4 && rm -rf ${ROOT}/build/${ARCH_TRIPLET}/${NAME} && mkdir -p ${ROOT}/build/${ARCH_TRIPLET}/${NAME} && cp src/bitcoind src/bitcoin-cli ${ROOT}/build/${ARCH_TRIPLET}/${NAME}"
+            "build": "set -x; cd ${ROOT}/libs/${NAME}/${ARCH_TRIPLET}; cd depends && make -j4 HOST=${ARCH_TRIPLET} && cd .. && ./autogen.sh && ./configure --prefix=${ROOT}/libs/${NAME}/${ARCH_TRIPLET}/depends/${ARCH_TRIPLET} --with-gui=no --disable-static --disable-tests --disable-bench && make -j4 && rm -rf ${ROOT}/build/${ARCH_TRIPLET}/${NAME} && mkdir -p ${ROOT}/build/${ARCH_TRIPLET}/${NAME} && cp src/bitcoind ${ROOT}/build/${ARCH_TRIPLET}/${NAME}"
         }
     },
     "install_bin": [
-        "${ROOT}/build/${ARCH_TRIPLET}/bitcoind/bitcoind",
-        "${ROOT}/build/${ARCH_TRIPLET}/bitcoind/bitcoin-cli"
+        "${ROOT}/build/${ARCH_TRIPLET}/bitcoind/bitcoind"
     ]
 }
